@@ -7,3 +7,11 @@ db/schema.rb linguist-generated
 vendor/* linguist-vendored
 config/credentials/*.yml.enc diff=rails_credentials
 config/credentials.yml.enc diff=rails_credentials
+
+# Automatically normalize text files to LF on checkout
+* text=auto
+
+# Keep binary files untouched
+*.png binary
+*.jpg binary
+*.pdf binary
