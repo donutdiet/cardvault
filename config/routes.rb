@@ -10,5 +10,19 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "credit_cards#index"
+
+  # Standard CRUD routes
+  # get "/credit_cards", to: "credit_cards#index"
+  # get "/credit_cards/:id", to: "credit_cards#show"
+
+  # get "/credit_cards/new", to: "credit_cards#new"
+  # post "/credit_cards", to: "credit_cards#create"
+
+  # get "/credit_cards/:id/edit", to: "credit_cards#edit"
+  # patch "credit_cards/:id", to: "credit_cards#update"
+  # put "credit_cards/:id", to: "credit_cards#update"
+
+  # delete "credit_cards/:id", to: "credit_cards#destroy"
+  resources :credit_cards
 end
