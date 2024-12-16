@@ -1,0 +1,6 @@
+<h1><%= @credit_card.name %></h1>
+
+<%= link_to "Back", credit_cards_path %>
+<%= link_to "Edit", edit_credit_card_path %>
+<%= button_to "Delete", @credit_card, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+<%# link_to "Destroy", credit_card_path(@credit_card), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
