@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_16_040758) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_21_064311) do
   create_table "credit_cards", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "annual_fee"
+    t.text "tags"
+    t.date "acquired_on"
   end
 
   create_table "sessions", force: :cascade do |t|

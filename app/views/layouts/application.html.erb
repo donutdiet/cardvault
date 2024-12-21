@@ -23,15 +23,24 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to "Home", root_path %>
-      <% if authenticated? %>
-        <%= button_to "Log out", session_path, method: :delete %>
-      <% else %>
-        <%= button_to "Log in", new_session_path %>
-      <% end %>
-    </nav>
-    <main>
+    <header class="container">
+      <h1>Card Vault</h1>
+      <nav>
+        <%= link_to "Home", root_path %>
+        <a href="#">Timeline</a>
+        <a href="#">Explore</a>
+        <a href="#">Account</a>
+        <% if authenticated? %>
+          <%= button_to "Log out", session_path, method: :delete %>
+        <% else %>
+          <%= button_to "Log in", new_session_path %>
+        <% end %>
+      </nav>
+      <ul>
+        Links
+      </ul>
+    </header>
+    <main class="container">
       <%= yield %>
     </main>
   </body>
