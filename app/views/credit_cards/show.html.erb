@@ -1,5 +1,9 @@
 <p><%= link_to "Back", credit_cards_path %></p>
 <h1><%= @credit_card.name %></h1>
+<p>Acquired on: <%= @credit_card.acquired_on %></p>
+<p>Annual fee: <%= number_to_currency(@credit_card.annual_fee, unit: "$") if @credit_card.annual_fee %></p>
+<p><%= @credit_card.tags %></p>
+
 
 <section class="card">
   <%= link_to "Edit", edit_credit_card_path %>

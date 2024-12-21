@@ -44,6 +44,6 @@ class CreditCardsController < ApplicationController
     end
 
     def credit_card_params
-      params.expect(credit_card: [ :name ])
+      params.expect(credit_card: [ :name, :annual_fee, :tags, :acquired_on ])
     end
 end

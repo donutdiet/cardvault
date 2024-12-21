@@ -3,6 +3,18 @@
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+  <div>
+    <%= form.label :annual_fee %>
+    <%= form.number_field :annual_fee %>
+  </div>
+  <div>
+    <%= form.label :tags %>
+    <%= form.text_field :tags, value: credit_card.tags %>
+  </div>
+  <div>
+    <%= form.label :acquired_on %>
+    <%= form.date_field :acquired_on, value: credit_card.acquired_on || Date.today %>
+  </div>
 
   <div>
     <%= form.submit%>
